@@ -1,0 +1,101 @@
+.test{
+    height: 70vh;
+}
+
+.form-control {
+    border: var(--bs-border-width) solid #597da1;
+}
+
+/*          Testando preview de imagens         */
+
+.top-section-container {
+    display: flex;
+    gap: 30px; /* Espaço entre a coluna da imagem e a coluna do texto */
+    margin-bottom: 30px;
+    flex-wrap: wrap; /* Os itens quebram para a próxima linha em telas menores */
+}
+
+/* Coluna da Imagem (esquerda) --------------------------------------------------------------------------------------------------------------------------*/
+.image-column {
+    flex: 0 0 280px; /* Largura fixa para a coluna da imagem */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza*/
+}
+
+.image-placeholder-container {
+    width: 100%; /* Ocupa a largura total da coluna */
+    height: 250px; 
+    border: 2px solid rgba(114, 58, 33, 0.3);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column; /* Para empilhar a imagem*/
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255,255,255, 0.7);
+    position: relative;
+    overflow: hidden; /* Garante que a imagem não vaze */
+    margin-bottom: 15px; /* Espaço entre o placeholder e os elementos abaixo */
+}
+
+.image-placeholder-container .preview-image {
+    width: 100%; /* Força a imagem a ocupar 100% da largura*/
+    height: 100%; /*Força a imagem a ocupar 100% da altura*/
+    object-fit: cover; /* Garante que a imagem cubra e corte, se necessário */
+    border-radius: 6px;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+#marca{
+    opacity: 0.5; /* Logo padrão opaca */
+}
+
+
+/* Esconde o input de arquivo padrão --------------------------------------------------------------------------------------------------------------------*/
+.input-file {
+    display: none;
+}
+
+/* Estilo para o label que age como botão de upload -----------------------------------------------------------------------------------------------------*/
+.button_imagem {
+    background-color: rgba(122, 112, 23, 0.7);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 10px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.button_imagem:hover {
+    background-color: rgba(122, 112, 23, 1);
+}
+
+.image-guidelines {
+    font-size: 15px;
+    color: #777;
+    text-align: center;
+    line-height: 1.4;
+}
+.image-guidelines p {
+    margin: 0;
+}
+
+
+/* Coluna do Título e Descrição (direita) ---------------------------------------------------------------------------------------------------------------*/
+.text-column {
+    flex: 1; /* Ocupa o restante do espaço disponível */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaçamento entre o título e a descrição */
+}
+
+.text-column .form-group {
+    margin-bottom: 0; /* Remove a margem padrão */
+}
