@@ -1,0 +1,20 @@
+/* Criar variaveis cores */
+.root{
+    --amarelo: #ffcc00;
+    --cinza: #cccccc;
+}
+
+/* Esconder input radio */
+.estrelas input[type=radio]{
+    display: none;
+}
+
+/* Criar estrelas preenchidas com amarelo */
+.estrelas label i.option.bi:before{
+    content: '\F586';
+    color: #ffcc00;
+}
+
+.estrelas input[type=radio]:checked~label i.bi:before{
+    color: #cccccc;
+}
