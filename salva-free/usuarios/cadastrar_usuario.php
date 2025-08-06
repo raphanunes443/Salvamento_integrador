@@ -1,5 +1,7 @@
 
-
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
 
 <main>
 
@@ -37,7 +39,7 @@
                    
         if ($conn->query($sql) === TRUE){ 
         echo "Contato cadastrado com sucesso!<br>"; 
-        echo '<a href="usuario.php?p=freelancers">Voltar</a>'; 
+        echo '<a href="index.php">Voltar</a>'; 
         } else { 
         echo "Erro: " . $sql . "<br>" . $conn->error; 
         }
@@ -51,7 +53,7 @@
       <form action="usuario.php?p=inserir" method="POST" enctype="multipart/form-data">
       <div class="">
           <label class="form-label">CPF </label>
-          <input type="text" name="cpf" required class="form-control">
+          <input type="number" name="cpf" required class="form-control" pattern="[0-9]*" inputmode="numeric">
       </div>
       <div class="mt-2">
           <label class="form-label">Nome </label>
@@ -143,7 +145,7 @@
       </div>
       
       <button type="submit" class="btn btn-primary">Cadastrar</button>
-      <a href="index.php" class="btn btn-outline-dark">Cancelar</a>
+      <a href="usuario.php?p=login" class="btn btn-outline-dark">Cancelar</a>
       </form>
 
       <script>

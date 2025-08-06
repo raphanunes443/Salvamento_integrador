@@ -1,5 +1,6 @@
 <?php
-include 'paginas/cabecalho.php'
+include 'paginas/cabecalho.php';
+include 'paginacao.php';
 ?>
 
 <main>
@@ -36,10 +37,31 @@ include 'paginas/cabecalho.php'
             </div>
           </div>
 
-
       <?php
       }
-      ?>         
+      ?>
+
+      
+      <div class="pagination-wrapper">
+              <nav aria-label="Courses pagination">
+                <ul class="pagination justify-content-center">
+
+                    <?php
+    $primeira_pag = max($page - $page_view, 1);
+    $ultima_pag = min($page_number, $page + $page_view);
+
+ for ($p = $primeira_pag; $p <= $ultima_pag; $p++) {
+    if($p === $page){
+        echo "<li class='page-item active'><a class='page-link' href='#'>{$p}</a></li>";
+    }else{
+    echo "<li class='page-item'><a class='page-link' href='?page{$p}'>{$p}</a></li>";
+    }
+}
+ ?>
+
+                </ul>
+              </nav>
+            </div>
         </div>
 
       </div>

@@ -65,7 +65,7 @@ categorias_usuario = Categorias de experiência
 
     if ($conn->query($sql) === TRUE) { 
         echo "Contato atualizado com sucesso!"; 
-        echo '<a href="cadastrar_usuario.php">Voltar</a>'; 
+        echo '<a href="usuario.php?p=listar">Voltar</a>'; 
         } else { 
         echo "Erro: " . $sql . "<br>" . $conn->error;
         }

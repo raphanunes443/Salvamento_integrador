@@ -1,0 +1,20 @@
+/* Mudanças no espaçamento no button do login */
+.btn-cad{
+    padding-top: 3px;
+}
+
+.testando .btn-enroll{
+    padding: 10px 20px !important;
+}
+
+.btn-entrar .btn-enroll{
+    padding: 10px 20px !important;
+}
+/* Mudança na cor do link para Whatsapp */
+.cor-what{
+    color: #00ffff94;
+}
+
+.cor-what:hover{
+    color: #00ffff;
+}

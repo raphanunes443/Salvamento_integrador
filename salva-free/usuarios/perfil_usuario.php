@@ -1,9 +1,16 @@
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+
 <main>
 
   <?php
-    $cpf = $_GET['cpf'];
+    $cpf = $_GET['id'];
     $resultado = $conn->query("SELECT * FROM usuarios WHERE cpf='$cpf'");
     $contato = $resultado->fetch_assoc();
+
+
+    $biografia_w_line = nl2br($contato['bio_usuario']);
   ?>
 
     <div class="page-title light-background">
@@ -42,7 +49,7 @@
                     <span class="credential">
                       <div class="contact-item">
                         <i class="bi bi-telephone"></i>
-                        <span><a href="https://wa.me/+55<?= $contato['telefone_usuario'];?>" target="_blank"><?= $contato['telefone_usuario'];?></a> </span>
+                        <span><a href="https://wa.me/+55<?= $contato['telefone_usuario'];?>" class="cor-what" target="_blank"><?= $contato['telefone_usuario'];?></a> </span>
                       </div>
                     </div>
                     </span>
@@ -57,7 +64,7 @@
                   <div class="about-content">
                     <div class="bio-section">
                       <h4>Biografia</h4>
-                      <p> <?= $contato['bio_usuario']; ?> </p>
+                      <p> <?= $biografia_w_line; ?> </p>
                     </div>
 
                 </div>

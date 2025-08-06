@@ -1,3 +1,6 @@
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
 <?php
 
 
@@ -56,11 +59,13 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-12 text-center">
+                  <div class="col-12 text-center btn-entrar">
                     <button type="submit" name="envio" value="log" class="btn btn-enroll">
                       Entrar
                     </button>
+                      <div class="btn-cad">
                     <a class="btn btn-enroll" href="usuario.php?p=novo">Cadastrar</a>
+                      </div>
                   </div>
                 </div>
 

@@ -1,14 +1,15 @@
 <?php
-    session_start();
-    include('banco/banco.php');
+include 'banco/banco.php';
+session_start();
 ?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt_br">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Free-Flight</title>
+  <title> Projetos</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -39,55 +40,24 @@
   ======================================================== -->
 </head>
 
-<body class="index-page">
+<body>
 
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
+      <a href="index.php" class="logo d-flex align-items-center me-auto">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.webp" alt=""> -->
-        <h1 class="sitename">Free-Flight</h1>
+        <h1 class="sitename">FreeFlight</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html" class="active">Inicio</a></li>
-          <li><a href="about.html">Sobre</a></li>
-          <li><a href="courses.html">Projetos</a></li>
-          <li><a href="instructors.html">Freelancers</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li class="dropdown"><a href="#"><span>More Pages</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="course-details.html">Course Details</a></li>
-              <li><a href="instructor-profile.html">Instructor Profile</a></li>
-              <li><a href="events.html">Events</a></li>
-              <li><a href="blog-details.html">Blog Details</a></li>
-              <li><a href="terms.html">Terms</a></li>
-              <li><a href="privacy.html">Privacy</a></li>
-              <li><a href="404.html">404</a></li>
-            </ul>
-          </li>
-
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>
-          <li><a href="contact.html">Fale conosco!</a></li>
+          <li><a href="index.php">Inicio</a></li>
+          <li><a href="sobre.php">Sobre</a></li>
+          <li><a href="projetos.php">Projetos</a></li>
+          <li><a href="usuario.php">Freelancers</a></li>      
+          <li><a href="contato.php">Contato</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -95,13 +65,11 @@
       <?php
       if (isset($_SESSION['login']) && $_SESSION['login'] == 1){
         echo'<a class="btn-getstarted" href="usuario.php?p=editar">Editar</a>';
-        echo'<a class="btn-getstarted" href="index.php?p=logout">Logout</a>';
+        echo'<a class="btn-getstarted" href="usuario.php?p=logout">Logout</a>';
       }else{
-        echo '<a class="btn-getstarted" href="index.php?p=login">Login</a>';
+        echo '<a class="btn-getstarted" href="usuario.php?p=login">Login</a>';
       }
       ?>
-      
-      
 
     </div>
   </header>

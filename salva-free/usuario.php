@@ -11,6 +11,8 @@ if (isset($_SESSION['login']) && $_SESSION['login'] == 1){
             include 'usuarios/editar_cadastro.php';
         }elseif($_GET['p'] == 'excluir'){
             include 'usuarios/deletar_usuario.php';
+        }elseif($_GET['p'] == 'logout'){
+            include 'sessao/logout.php';
         }
     }else{
         include 'usuarios/listar_usuarios.php';
@@ -19,7 +21,7 @@ if (isset($_SESSION['login']) && $_SESSION['login'] == 1){
      if (isset($_GET['p'])){
         if($_GET['p'] == 'novo' || $_GET['p'] == 'inserir'){
             include 'usuarios/cadastrar_usuario.php';
-        }elseif($_GET['p'] == 'listar'){
+        }elseif($_GET['p'] == 'login'){
             include 'sessao/login.php';
         }
     }else{
